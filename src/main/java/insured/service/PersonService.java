@@ -48,8 +48,8 @@ public class PersonService {
                     System.out.println("Vek nesmie byť prázdný.");
             } while (ageString.isEmpty());
             age=Integer.parseInt(ageString);
-            if (age<=0)
-                System.out.println("Vek nesmie byť 0.");
+            if (age<0 && age>350)
+                System.out.println("Vek musí byť väčší ako 0. ");
         } while (age<=0);
 
 
