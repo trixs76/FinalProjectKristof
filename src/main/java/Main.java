@@ -4,7 +4,7 @@ import insured.view.ConsoleView;
 
 import java.util.Scanner;
 
-public class main {
+public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         PersonService personService=new PersonService(scanner);

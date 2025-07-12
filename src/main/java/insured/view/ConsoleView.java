@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class ConsoleView {
-    private static Scanner scanner;
+    Scanner scanner;
     PersonService personService;
 
     String name, surname, phone;
@@ -41,8 +41,11 @@ public class ConsoleView {
     }
 
     /**
-     * Display all insured people to console.
+     * Displays a list of all insured persons.
+     *
+     * @param insuredPeople list of insured persons to display
      */
+
     public void displayInsuredPeople(List<InsuredPerson> insuredPeople){
         if (insuredPeople.isEmpty()){
             System.out.println("Zoznam je prázdny.");
@@ -64,7 +67,9 @@ public class ConsoleView {
     }
 
     /**
-     * View full data record by name and surname record in List insuredPeople.
+     * Displays insured persons matching a given name and surname.
+     *
+     * @param insuredPeople list of matching insured persons
      */
 
     public void displayFoundInsuredByNameAndSurname(List<InsuredPerson> insuredPeople) {
