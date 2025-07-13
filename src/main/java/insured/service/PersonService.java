@@ -14,7 +14,7 @@ public class PersonService {
     private static Scanner scanner;
 
     public PersonService(Scanner scanner){
-        this.scanner=scanner;
+        PersonService.scanner =scanner;
     }
 
     //validate input formulars for name, surname, age, phone
@@ -47,9 +47,9 @@ public class PersonService {
                 if (ageString.isEmpty())
                     System.out.println("Vek nesmie byť prázdný.");
             } while (ageString.isEmpty());
-            age=Integer.parseInt(ageString);
-            if (age<0 && age>350)
-                System.out.println("Vek musí byť väčší ako 0. ");
+            age = Integer.parseInt(ageString);
+            if (age < 0 || age > 120)
+                System.out.println("Vek musí byť v rozmedzi 0 - 120.");
         } while (age<=0);
 
 
@@ -68,8 +68,6 @@ public class PersonService {
 
     /**
      * Find insured people by Name and Surname
-     * @param name
-     * @param surname
      * @return List collection foundPeople
      */
     public List<InsuredPerson> findInsuredPersonByNameAndSurname(String name, String surname, List<InsuredPerson> insuredPeople) {
