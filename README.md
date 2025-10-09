@@ -1,1 +1,1 @@
-A simple project for a final exam in Java.
+A simple project "InsuredApp" for a final exam in Java.
